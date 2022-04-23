@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@500&family=Cairo&family=Chivo:wght@700&family=Montserrat:wght@500&family=Nunito:wght@500&family=Roboto&display=swap');
+body {
+    font-family: 'Chivo', sans-serif;
+    margin: 0;
+    padding: 0;
+    --color-black: rgb(12, 12, 12);
+    --color-white: #fff;
+    --color-blue: rgb(62, 139, 255);
+    --color-grey: rgb(185, 185, 185);
+    /* 
+    font-family: 'Archivo', sans-serif;
+    font-family: 'Cairo', sans-serif;
+    font-family: 'Chivo', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Nunito', sans-serif;
+    font-family: 'Roboto', sans-serif; 
+    */
+}
+
+
+/* Add a black background color to the top navigation */
+
+#topnav-left:hover {
+    color: var(--color-blue);
+    transition: 0.3s;
+}
+
+.wrapper-nav {
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+    margin-top: 15px;
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+.topnav {
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    transition: 0.5s;
+}
+
+
+/* Style the links inside the navigation bar */
+
+.topnav a {
+    float: left;
+    color: var();
+    text-align: center;
+    padding: 16px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: var(--color-black);
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+
+/* Add a color to the active/current link */
+
+.topnav a.active {
+    color: var(--color-black);
+}
+
+
+/* Centered section inside the top navigation */
+
+.topnav-centered a {
+    float: none;
+    position: absolute;
+    padding-bottom: 30px;
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    transform: translate(-50%, -50%);
+}
+
+
+/* Right-aligned section inside the top navigation */
+
+.topnav-right {
+    float: right;
+    padding-right: 17px;
+}
+
+.topnav-right a {
+    margin-right: 10px;
+    border-style: solid;
+    padding: 12px;
+    border-radius: 4.5px;
+    border-width: 2.6px;
+    box-shadow: 3px 6px var(--color-black);
+}
+
+.topnav-right a:hover {
+    background-color: rgb(62, 139, 255);
+    color: var(--color-white);
+    border-color: var(--color-black);
+}
+
+
+/* Responsive navigation menu - display links on top of each other instead of next to each other (for mobile devices) */
+
+@media screen and (max-width: 950px) {
+    .topnav-centered a {
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: none;
+        margin: 50px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .topnav a,
+    .topnav-right {
+        float: none;
+        display: block;
+    }
+    .topnav-centered a {
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: none;
+        margin: 50px;
+        text-align: center;
+    }
+}
+
+
+/* end nav */
+
+#main {
+    margin: 0px;
+    padding: 0px;
+}
+
+#box-wrapper {
+    margin-top: 100px;
+}
+
+#box-1 {
+    background-image: linear-gradient(to right, var(--color-white), rgb(235, 233, 233));
+    text-align: center;
+    border-radius: 5px;
+    border-style: solid;
+    width: 950px;
+    margin-right: 50%;
+    margin-left: 50%;
+    transform: translate(-50%, 0%);
+    padding: 28px;
+    padding-bottom: 38px;
+    box-shadow: 2px 6px var(--color-black);
+}
+
+@media screen and (max-width: 900px) {
+    #box-1 {
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #box-1 {
+        width: 200px;
+    }
+}
+
+#box-1 h1 {
+    margin-top: 50px;
+    font-size: 45px;
+}
+
+#box-1 p {
+    font-size: 18px;
+    margin-bottom: 45px;
+    ;
+}
+
+#box-1 a {
+    background-color: var(--color-white);
+    color: var(--color-black);
+    border-style: solid;
+    border-radius: 5px;
+    box-shadow: 2px 6px var(--color-black);
+    font-weight: bold;
+    font-size: 20px;
+    margin: 10px;
+    padding: 5px;
+    padding-right: 30px;
+    padding-left: 30px;
+    margin-bottom: 50px;
+    border-color: var(--color-black);
+    transition: 0.5s;
+    text-decoration: none;
+}
+
+#box-1 a:hover {
+    background-color: rgb(62, 139, 255);
+    color: var(--color-white);
+}
+
+#box-wrapper-2 {
+    height: 100%;
+    margin: 5%;
+}
+
+
+/* Sidebar */
+
+
+/* The sidebar menu */
+
+.sidebar {
+    height: 100%;
+    /* 100% Full-height */
+    width: 0;
+    /* 0 width - change this with JavaScript */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: var(--color-black);
+    /* Black*/
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+    padding-top: 60px;
+    /* Place content 60px from the top */
+    transition: 0.5s;
+    /* 0.5 second transition effect to slide in the sidebar */
+}
+
+
+/* The sidebar links */
+
+.sidebar a {
+    padding: 0px 0px 0px 10px;
+    text-decoration: none;
+    font-size: 15px;
+    color: var(--color-grey);
+    display: block;
+    transition: 0.3s;
+    padding-right: 50px;
+    margin-left: 30px;
+    padding-left: 15px;
+    /*width: 60%;*/
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.sidebar p {
+    text-align: left;
+    padding: 8px 8px 8px 32px;
+    width: 100%;
+    text-decoration: none;
+    font-size: 20px;
+    color: var(--color-white);
+    display: block;
+    transition: 0.3s;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+/* When you mouse over the navigation links, change their color */
+
+
+/* Position and style the close button (top right corner) */
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 19px;
+    right: 0px;
+    font-size: 36px;
+    margin-left: 60px;
+    background-color: var(--color-black);
+    color: var(--color-white);
+}
+
+.sidebar .closebtn:hover {
+    color: var(--color-blue);
+}
+
+
+/* The button used to open the sidebar */
+
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+}
+
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+
+#main {
+    transition: margin-left .5s;
+    /* If you want a transition effect */
+    padding: 20px;
+}
+
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+
+@media screen and (max-height: 450px) {
+    .sidebar {
+        padding-top: 15px;
+    }
+    .sidebar a {
+        font-size: 18px;
+    }
+}
+
+
+/* Sidebar end*/
+
+footer {
+    text-align: center;
+}
