@@ -1,4 +1,4 @@
-# :: AccessToken & AXTN WEB
+# AccessToken & AXTN WEB
 
 Simple overview of use/purpose.
 
