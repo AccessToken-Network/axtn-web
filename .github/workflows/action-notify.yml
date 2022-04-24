@@ -1,0 +1,25 @@
+name: Notification on push
+
+on:
+  push:
+    branches:
+    - main
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Discord push notification
+      env:
+        DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+        DISCORD_USERNAME: GitHub
+        DISCORD_AVATAR: https://cdn.unix.lu/kraken.webp
+      uses: Ilshidur/action-discord@master
+      with:
+        args: 'A new commit has been pushed to {{ EVENT_PAYLOAD.repository.full_name }}.'
+    - name: Discord notification
+      env:
+        DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+      uses: Ilshidur/action-discord@master
